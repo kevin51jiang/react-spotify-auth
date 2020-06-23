@@ -25,6 +25,9 @@ class Example extends Component {
 }
 ```
 
+Draws heavily upon [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
+
+
 ## License
 
 MIT © [kevin51jiang](https://github.com/kevin51jiang)
