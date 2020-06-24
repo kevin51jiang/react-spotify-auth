@@ -1,13 +1,13 @@
 const hash = window.location.hash
   .substring(1)
-  .split("&")
+  .split('&')
   .reduce((initial, item) => {
     if (item) {
-      var parts = item.split("=");
-      initial[parts[0]] = decodeURIComponent(parts[1]);
+      var parts = item.split('=');
+      initial[parts[0]] = decodeURIComponent(parts[1])
     }
-    return initial;
+    return initial
   }, {});
 
 
-export default hash;
+export default hash
