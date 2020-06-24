@@ -1,7 +1,7 @@
 {
   "name": "react-spotify-auth",
-  "version": "1.0.0",
-  "description": "Easy Implicit flow spotify auth component for react",
+  "version": "0.1.0",
+  "description": "Easy Spotify Authentication, written in React",
   "author": "kevin51jiang",
   "license": "MIT",
   "repository": "kevin51jiang/react-spotify-auth",
