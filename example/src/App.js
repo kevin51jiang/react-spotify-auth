@@ -1,10 +1,14 @@
 import React from 'react'
 
-import { ExampleComponent } from 'react-spotify-auth'
+import { SpotifyAuth, SpotifyScopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <>
+      <SpotifyAuth  />
+    </>
+  )
 }
 
 export default App
