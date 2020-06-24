@@ -19,9 +19,10 @@ yarn add react-spotify-auth
 ```jsx
 import React, { useEffect, useState } from 'react'
 import { SpotifyAuth, Scopes } from 'react-spotify-auth';
-import { SpotifyApiContext, User } from "react-spotify-api";
 
+import { SpotifyApiContext } from "react-spotify-api";
 import Cookies from 'js-cookie'
+
 import 'react-spotify-auth/dist/index.css'
 import './App.css';
 
@@ -31,7 +32,6 @@ const App = () => {
 
   useEffect(() => {
     setSpotifyAuthToken(Cookies.get('spotifyAuthToken'));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [Cookies.get('spotifyAuthToken')])
 
   return (
@@ -58,7 +58,7 @@ const App = () => {
 
 ```
 
-Draws heavily upon [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
+Inspired by [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
 
 
 ## License
