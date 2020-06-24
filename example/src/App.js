@@ -4,6 +4,7 @@ import { SpotifyApiContext, User } from "react-spotify-api";
 
 import Cookies from 'js-cookie'
 import 'react-spotify-auth/dist/index.css'
+import './App.css';
 
 
 const App = () => {
@@ -11,11 +12,8 @@ const App = () => {
 
   useEffect(() => {
     setSpotifyAuthToken(Cookies.get('spotifyAuthToken'));
-  })
-
-  const onAccessToken = (newToken) => {
-    setSpotifyAuthToken(newToken);
-  }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [Cookies.get('spotifyAuthToken')])
 
   const logout = () => {
     Cookies.remove('spotifyAuthToken');
@@ -29,23 +27,30 @@ const App = () => {
         (
           // Display the app
           <>
-            <h1>Hi! Welcome to your new App</h1>
+            <div className="info-card">
+              <h2>Hi! How's it going?</h2>
+            </div>
+            <br />
             <SpotifyApiContext.Provider value={spotifyAuthToken}>
-              <h2>Profile:</h2>
               <User>
                 {(user) =>
                   user && user.data ? (
-                    <ul>
-                      {console.log('user.display_name', user)}
-                      <li>Name - {user.data.display_name}</li>
-                      <li>ID - {user.data.id}</li>
-                      <li>Email - {user.data.email}</li>
-                    </ul>
+                    <div className="info-card">
+                      {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
+                      <img src={user.data.images[0].url} alt="Your Spotify Profile Picture" />
+                      <ul>
+                        <li>Name: {user.data.display_name}</li>
+                        <li>ID: {user.data.id}</li>
+                        <li>Email: {user.data.email}</li>
+                        <li>Type: {user.data.product}</li>
+                      </ul>
+                    </div>
                   ) : <p>Loading...</p>
                 }
               </User>
             </SpotifyApiContext.Provider>
-            <button onClick={logout}>Logout</button>
+            <br />
+            <button className="logout" onClick={logout}>Logout</button>
           </>
         ) : (
           // Display the login page
@@ -53,7 +58,7 @@ const App = () => {
             redirectUri='http://localhost:3000/callback'
             clientID='1a70ba777fec4ffd9633c0c418bdcf39'
             scopes={[Scopes.userReadPrivate, Scopes.userReadEmail]}
-            onAccessToken={onAccessToken}
+            className="centered"
           />
         )
       }
