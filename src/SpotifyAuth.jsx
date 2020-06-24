@@ -32,10 +32,10 @@ class SpotifyAuth extends Component {
     const accessToken = hash.access_token
 
     if (accessToken) {
-      document.cookie = `spotifyAuthToken=${accessToken}; max-age=${
-        60 * 60
-      }; Secure;`
-      this.props.onHasAccessToken(accessToken)
+      // eslint-disable-next-line prettier/prettier
+      document.cookie = `spotifyAuthToken=${accessToken}; max-age=${60 * 60};`
+
+      this.props.onAccessToken(accessToken)
     }
   }
 
@@ -71,7 +71,7 @@ SpotifyAuth.defaultProps = {
   redirectUri: 'http://localhost:3000/callback',
   clientID: '1a70ba777fec4ffd9633c0c418bdcf39',
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
-  onHasAccessToken: () => console.log('I have an access token'),
+  onAccessToken: () => console.log('I have an access token'),
   containerClassName: 'spotify-signin-container',
   btnClassName: 'spotify-signin-btn'
 }

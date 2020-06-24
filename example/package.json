@@ -10,9 +10,11 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "js-cookie": "^2.2.1",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",
+    "react-spotify-api": "^3.0.0",
     "react-spotify-auth": "link:.."
   },
   "devDependencies": {
