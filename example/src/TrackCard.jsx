@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn, MDBTypography } from "mdbreact";
+import { MDBCol, MDBCard, MDBCardImage, MDBCardBody, MDBCardTitle, MDBCardText, MDBBtn } from "mdbreact";
 
 const TrackCard = (props) => {
   return (

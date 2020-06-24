@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { SpotifyApiContext, User, UserTop, UserPlaylists } from 'react-spotify-api'
+import { SpotifyApiContext, User, UserTop } from 'react-spotify-api'
 import Cookies from 'js-cookie'
 
 import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
 
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardUp, MDBCardTitle, MDBCardText, MDBAvatar, MDBFlippingCard, MDBBtn } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText } from "mdbreact";
 import 'mdbreact/dist/css/mdb.css'
 
 import TrackCard from "./TrackCard";

@@ -3,11 +3,10 @@ const hash = window.location.hash
   .split('&')
   .reduce((initial, item) => {
     if (item) {
-      var parts = item.split('=');
+      var parts = item.split('=')
       initial[parts[0]] = decodeURIComponent(parts[1])
     }
     return initial
-  }, {});
-
+  }, {})
 
 export default hash

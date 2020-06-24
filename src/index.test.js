@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { SpotifyAuth } from '.'
 
-describe('ExampleComponent', () => {
+describe('SpotifyAuth', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(SpotifyAuth).toBeTruthy()
   })
 })

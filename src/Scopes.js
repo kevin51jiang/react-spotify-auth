@@ -38,4 +38,4 @@ const scopes = {
   userReadPrivate: 'user-read-private'
 }
 
-export default scopes;
+export default scopes
