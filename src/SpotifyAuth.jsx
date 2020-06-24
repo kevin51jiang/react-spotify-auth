@@ -60,7 +60,7 @@ class SpotifyAuth extends Component {
           className={this.props.btnClassName}
           onClick={(event) => this.handleClick(event)}
         >
-          Continue with Spotify
+          {this.props.title}
         </button>
       </div>
     )
@@ -73,7 +73,8 @@ SpotifyAuth.defaultProps = {
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
   onAccessToken: () => console.log('I have an access token'),
   containerClassName: 'spotify-signin-container',
-  btnClassName: 'spotify-signin-btn'
+  btnClassName: 'spotify-signin-btn',
+  title: 'Continue with Spotify'
 }
 
 export default SpotifyAuth
