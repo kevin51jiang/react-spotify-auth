@@ -1,15 +1,12 @@
 import React, { useEffect, useState } from 'react'
-
 import { SpotifyAuth, Scopes } from 'react-spotify-auth';
-
-import { SpotifyApiContext, User, Track } from "react-spotify-api";
+import { SpotifyApiContext, User } from "react-spotify-api";
 
 import Cookies from 'js-cookie'
 import 'react-spotify-auth/dist/index.css'
 
 
 const App = () => {
-  const [userInfo, setUserInfo] = useState({});
   const [spotifyAuthToken, setSpotifyAuthToken] = useState();
 
   useEffect(() => {
@@ -32,24 +29,21 @@ const App = () => {
         (
           // Display the app
           <>
-            <h1>Hi! Welcome to the App</h1>
+            <h1>Hi! Welcome to your new App</h1>
             <SpotifyApiContext.Provider value={spotifyAuthToken}>
+              <h2>Profile:</h2>
               <User>
-                {(user, loading, error) =>
-                  user ? (
+                {(user) =>
+                  user && user.data ? (
                     <ul>
-                      {console.log('user.display_name', user.display_name)}
-                      <li>Name - {user.display_name}</li>
-                      <li>ID - {user.id}</li>
+                      {console.log('user.display_name', user)}
+                      <li>Name - {user.data.display_name}</li>
+                      <li>ID - {user.data.id}</li>
+                      <li>Email - {user.data.email}</li>
                     </ul>
-                  ) : null
+                  ) : <p>Loading...</p>
                 }
               </User>
-              <Track id="4kmBkq3ONzENSIRv2ah8Gh">
-                {(track, loading, error) => (
-                  track ? <h1>{track.name}</h1> : null
-                )}
-              </Track>
             </SpotifyApiContext.Provider>
             <button onClick={logout}>Logout</button>
           </>
@@ -59,7 +53,7 @@ const App = () => {
             redirectUri='http://localhost:3000/callback'
             clientID='1a70ba777fec4ffd9633c0c418bdcf39'
             scopes={[Scopes.userReadPrivate, Scopes.userReadEmail]}
-            on
+            onAccessToken={onAccessToken}
           />
         )
       }
