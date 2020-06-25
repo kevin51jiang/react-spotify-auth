@@ -7,6 +7,9 @@ import scopes from './Scopes'
 import hash from './hash'
 import styles from './styles.module.css'
 
+// import { ReactComponent as Spotify } from './spotify.svg'
+import SpotifyLogo from './spotify.svg'
+
 class SpotifyAuth extends Component {
   constructor(props) {
     super(props)
@@ -57,10 +60,11 @@ class SpotifyAuth extends Component {
     return (
       <div className={this.props.containerClassName}>
         <button
-          className={this.props.btnClassName}
+          className={styles.test}
           onClick={(event) => this.handleClick(event)}
         >
           {this.props.title}
+          <img src={SpotifyLogo} alt='Spotify Logo' />
         </button>
       </div>
     )
