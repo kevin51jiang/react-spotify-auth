@@ -5,9 +5,11 @@ import Cookies from 'js-cookie'
 import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
 
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText } from "mdbreact";
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBBtn } from "mdbreact";
 import 'mdbreact/dist/css/mdb.css'
 
+import './index.css';
+import './App.scss';
 import TrackCard from "./TrackCard";
 
 const App = () => {
@@ -39,7 +41,7 @@ const App = () => {
                 {(user) =>
                   user && user.data ? (
                     <>
-                      <MDBCol style={{ maxWidth: '22rem' }}>
+                      <MDBCol style={{ maxWidth: '22rem', padding: '0 0 1rem 1rem' }}>
                         <MDBCard>
                           <MDBCardImage
                             className='img-fluid'
@@ -47,14 +49,12 @@ const App = () => {
                             alt='Your Spotify Profile Picture'
                             waves
                           />
-                          <MDBCardBody>
+                          <MDBCardBody style={{padding: '1rem'}}>
                             <MDBCardTitle>
                               Welcome, {user.data.display_name}
                             </MDBCardTitle>
                             <MDBCardText>
-                              Some quick example text to build on the card
-                              title and make up the bulk of the card's
-                              content.
+                              Here's some of your top tracks, as listed by Spotify.
                               </MDBCardText>
                           </MDBCardBody>
                         </MDBCard>
@@ -65,24 +65,27 @@ const App = () => {
                     )
                 }
               </User>
-              <UserTop type="tracks">
-                {(tracks, loading, error) =>
-                  tracks && tracks.data ? (
-                    tracks.data.items.map((track, ind) => {
-                      return (
-                        <>
-                          <TrackCard
-                            track={track} />
-                        </>
-                      )
-                    })
-                  ) : null
-                }
-              </UserTop>
+
+              <MDBRow className="masonry-with-columns">
+                <UserTop type="tracks">
+                  {(tracks, loading, error) =>
+                    tracks && tracks.data ? (
+                      tracks.data.items.map((track, ind) => {
+                        return (
+                          <>
+                            <TrackCard
+                              track={track} />
+                          </>
+                        )
+                      })
+                    ) : null
+                  }
+                </UserTop>
+              </MDBRow>
             </SpotifyApiContext.Provider>
-            <button className='logout' onClick={logout}>
+            <MDBBtn onClick={logout}>
               Logout
-            </button>
+            </MDBBtn>
           </>
         ) : (
             // Display the login page
@@ -90,7 +93,6 @@ const App = () => {
               redirectUri='http://localhost:3000/callback'
               clientID='1a70ba777fec4ffd9633c0c418bdcf39'
               scopes={[Scopes.userReadPrivate, Scopes.userReadEmail, Scopes.userTopRead]}
-              className='centered'
             />
           )}
       </MDBContainer>
