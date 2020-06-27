@@ -58,13 +58,17 @@ class SpotifyAuth extends Component {
 
   render() {
     return (
-      <div className={this.props.containerClassName}>
+      <div className={styles.rsaSpotifyContainer}>
         <button
-          className={styles.test}
+          className={styles.rsaSpotifyBtn}
           onClick={(event) => this.handleClick(event)}
         >
-          {this.props.title}
-          <img src={SpotifyLogo} alt='Spotify Logo' />
+          <span className='dispText'>{this.props.title} </span>{' '}
+          <img
+            src={SpotifyLogo}
+            alt='Spotify Logo'
+            className={styles.rsaSpotifyLogo}
+          />
         </button>
       </div>
     )
