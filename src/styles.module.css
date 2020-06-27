@@ -1,9 +1,26 @@
 /* add css module styles here (optional) */
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.rsaSpotifyBtn {
+  /* display: flex; */
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  background-color: #1db954;
+  color: #fff;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: normal;
+  border: none;
+}
+
+.rsaSpotifyBtn:hover {
+  transform: translate(-0.1rem, 0.1rem);
+  box-shadow: 0 0.25rem 0.75rem 0  #777777;
+}
+
+.rsaSpotifyLogo {
+  padding: 0.25rem 0.5rem;;
+  height: 1.5rem;
 }

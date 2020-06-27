@@ -12,6 +12,7 @@
   "dependencies": {
     "js-cookie": "^2.2.1",
     "mdbreact": "^4.27.0",
+    "node-sass": "^4.14.1",
     "react": "link:../node_modules/react",
     "react-dom": "link:../node_modules/react-dom",
     "react-scripts": "link:../node_modules/react-scripts",

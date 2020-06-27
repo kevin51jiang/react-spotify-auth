@@ -14,6 +14,8 @@ npm install --save react-spotify-auth
 yarn add react-spotify-auth
 ```
 
+**Not recommended for production for versions <1.0.0**
+
 ## Usage
 
 ```jsx
