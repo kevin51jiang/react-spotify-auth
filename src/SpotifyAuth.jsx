@@ -82,7 +82,7 @@ SpotifyAuth.defaultProps = {
   onAccessToken: () => console.log('I have an access token'),
   containerClassName: 'spotify-signin-container',
   btnClassName: 'spotify-signin-btn',
-  title: 'CONTINUE WITH SPOTIFY'
+  title: 'Continue with Spotify'
 }
 
 export default SpotifyAuth

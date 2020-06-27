@@ -11,6 +11,7 @@ import 'mdbreact/dist/css/mdb.css'
 import './index.css';
 import './App.scss';
 import TrackCard from "./TrackCard";
+import defaultPfp from './examplePfp.jpg';
 
 const App = () => {
   const [spotifyAuthToken, setSpotifyAuthToken] = useState()
@@ -45,7 +46,7 @@ const App = () => {
                         <MDBCard>
                           <MDBCardImage
                             className='img-fluid'
-                            src={user.data.images[0].url}
+                            src={user.data.images[0] ? user.data.images[0].url : defaultPfp}
                             alt='Your Spotify Profile Picture'
                             waves
                           />
