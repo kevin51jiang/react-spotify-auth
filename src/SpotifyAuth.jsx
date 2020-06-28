@@ -58,7 +58,9 @@ class SpotifyAuth extends Component {
 
   render() {
     return (
-      <div className={styles.rsaSpotifyContainer}>
+      <div
+        className={this.props.containerClassName || styles.rsaSpotifyContainer}
+      >
         <button
           className={styles.rsaSpotifyBtn}
           onClick={(event) => this.handleClick(event)}
@@ -66,12 +68,9 @@ class SpotifyAuth extends Component {
           <img
             src={SpotifyLogo}
             alt='Spotify Logo'
-            className={styles.rsaSpotifyLogo}
-            style={{
-
-            }}
+            className={this.props.btnClassName || styles.rsaSpotifyLogo}
           />
-          <span className='dispText'>{this.props.title} </span>{' '}
+          <span className='dispText'>{this.props.title} </span>
         </button>
       </div>
     )
@@ -83,8 +82,6 @@ SpotifyAuth.defaultProps = {
   clientID: '1a70ba777fec4ffd9633c0c418bdcf39',
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
   onAccessToken: () => console.log('I have an access token'),
-  containerClassName: 'spotify-signin-container',
-  btnClassName: 'spotify-signin-btn',
   title: 'Continue with Spotify'
 }
 
