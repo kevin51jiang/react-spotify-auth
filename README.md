@@ -2,7 +2,7 @@
 
 > Easy Spotify Authentication, written in React
 
-[![NPM](https://img.shields.io/npm/v/react-spotify-auth.svg)](https://www.npmjs.com/package/react-spotify-auth) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-spotify-auth.svg)](https://www.npmjs.com/package/react-spotify-auth) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/kevin51jiang/react-spotify-auth.svg?branch=master)](https://travis-ci.org/kevin51jiang/react-spotify-auth)
 
 ## Install
 
@@ -61,17 +61,17 @@ const App = () => {
 
 ## API
 
-Props that you can use to customize the button
+Here's some props that you can use to customize the button. Starred fields are highly recommended, but have demo values as default props.
 
 | Name | Description |
 | ---| --- |
-|`redirectUri` | Spotify redirect URI. In most cases, this is the URL of your webpage. It *must be set in your Developer Console*. |
-|`clientID` | Spotify app Client ID. Can be found from the Spotify Developer Console. |
-|`scopes` | **Array** of camelCased equivalent for the scopes you are requesting. For example, if you wanted the scope `user-read-recently-played` you can enter `Scopes.userReadRecentlyPlayed`. By default, the button requests `user-read-private` and `user-read-email`.|
-|`onAccessToken` | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`. |
+|`redirectUri`\* | Spotify redirect URI. In most cases, this is the URL of your webpage. *It must be set in your Developer Console*. |
+|`clientID`\* | Spotify app Client ID. Can be found from the Spotify Developer Console. |
+|`scopes`\* | **Array** of camelCased equivalent for the scopes you are requesting. For example, if you wanted the scope `user-read-recently-played` you can enter `[Scopes.userReadRecentlyPlayed]`. By default, the button requests `user-read-private` and `user-read-email`.|
+|`onAccessToken` | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`. By default, it prints a message to the console. |
 |`title` | Message inside the button. By default, it is "Continue with Spotify". |
-|`btnClassName` | Class(es) that is given to the button. It has one by default already distributed with the package. |
-|`containerClassName` | Class(es) that is given to the wrapping div. It has one by default already distributed with the package. |
+|`btnClassName` | Class(es) that is given to the button. By default, the package includes one already. |
+|`containerClassName` | Class(es) that is given to the wrapping div. By default, the package includes one already.  |
 
 
 Inspired by [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
