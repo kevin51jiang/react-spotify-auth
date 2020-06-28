@@ -8,8 +8,8 @@ import 'react-spotify-auth/dist/index.css'
 import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBBtn } from "mdbreact";
 import 'mdbreact/dist/css/mdb.css'
 
-import './index.css';
 import './App.scss';
+import './index.css';
 import TrackCard from "./TrackCard";
 import defaultPfp from './examplePfp.jpg';
 
@@ -50,7 +50,7 @@ const App = () => {
                             alt='Your Spotify Profile Picture'
                             waves
                           />
-                          <MDBCardBody style={{padding: '1rem'}}>
+                          <MDBCardBody style={{ padding: '1rem' }}>
                             <MDBCardTitle>
                               Welcome, {user.data.display_name}
                             </MDBCardTitle>
@@ -89,12 +89,16 @@ const App = () => {
             </MDBBtn>
           </>
         ) : (
-            // Display the login page
-            <SpotifyAuth
-              redirectUri='http://localhost:3000/callback'
-              clientID='1a70ba777fec4ffd9633c0c418bdcf39'
-              scopes={[Scopes.userReadPrivate, Scopes.userReadEmail, Scopes.userTopRead]}
-            />
+            <div className="login-page">
+              <h1>View your top songs</h1>
+              <h2>Sign in to get started</h2>
+              {/*  Display the login page */}
+              <SpotifyAuth
+                redirectUri={!process.env.NODE_ENV || process.env.NODE_ENV === 'development' ? 'http://localhost:3000/callback' : 'http://kevinjiang.ca/react-spotify-auth/callback'}
+                clientID='1a70ba777fec4ffd9633c0c418bdcf39'
+                scopes={[Scopes.userReadPrivate, Scopes.userReadEmail, Scopes.userTopRead]}
+              />
+            </div>
           )}
       </MDBContainer>
     </div>
