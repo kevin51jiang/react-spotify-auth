@@ -1,6 +1,6 @@
 {
-  "short_name": "react-spotify-auth",
-  "name": "react-spotify-auth",
+  "short_name": "React Spotify Auth",
+  "name": "React Spotify Auth Demo",
   "icons": [
     {
       "src": "favicon.ico",

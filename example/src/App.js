@@ -96,10 +96,12 @@ const App = () => {
               <h1>View your top songs</h1>
               <h2>Sign in to get started</h2>
               {/*  Display the login page */}
+
               <SpotifyAuth
                 redirectUri={isDev ? 'http://localhost:3000/callback' : 'http://kevinjiang.ca/react-spotify-auth'}
                 clientID='1a70ba777fec4ffd9633c0c418bdcf39'
                 scopes={[Scopes.userReadPrivate, Scopes.userReadEmail, Scopes.userTopRead]}
+                containerClassName='spotifyBtn'
               />
             </div>
           )}
