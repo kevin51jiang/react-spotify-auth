@@ -13,14 +13,18 @@
   align-items: center;
   font-size: normal;
   border: none;
+  border-radius: 0.2rem;
 }
 
 .rsaSpotifyBtn:hover {
-  transform: translate(-0.1rem, 0.1rem);
-  box-shadow: 0 0.25rem 0.75rem 0  #777777;
+  transform: translate(-1px, 2px) scale(1.01);
+  box-shadow: 0 0.25rem 0.75rem 0 #777777;
 }
 
 .rsaSpotifyLogo {
-  padding: 0.25rem 0.5rem;;
+  /* Convert spotify logo to white */
+  filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(162deg)
+    brightness(103%) contrast(103%);
+  padding: 0.25rem 0.5rem;
   height: 1.5rem;
 }
