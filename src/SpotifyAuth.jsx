@@ -57,21 +57,19 @@ class SpotifyAuth extends Component {
 
   render() {
     return (
-      <div
-        className={this.props.containerClassName || styles.rsaSpotifyContainer}
+      <button
+        className={this.props.btnClassName}
+        onClick={(event) => this.handleClick(event)}
       >
-        <button
-          className={this.props.btnClassName || styles.rsaSpotifyBtn}
-          onClick={(event) => this.handleClick(event)}
-        >
+        {!this.props.noLogo && (
           <img
             src={SpotifyLogo}
             alt='Spotify Logo'
             className={styles.rsaSpotifyLogo}
           />
-          <span className='dispText'>{this.props.title} </span>
-        </button>
-      </div>
+        )}
+        <span className='dispText'>{this.props.title} </span>
+      </button>
     )
   }
 }
@@ -80,8 +78,10 @@ SpotifyAuth.defaultProps = {
   redirectUri: 'http://localhost:3000/callback',
   clientID: '1a70ba777fec4ffd9633c0c418bdcf39',
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
-  onAccessToken: () => console.log('I have an access token'),
-  title: 'Continue with Spotify'
+  onAccessToken: (token) => console.log('Access token: ', token),
+  title: 'Continue with Spotify',
+  btnClassName: styles.rsaSpotifyBtn,
+  noLogo: false
 }
 
 export default SpotifyAuth
