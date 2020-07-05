@@ -14,7 +14,7 @@ import TrackCard from "./TrackCard";
 import defaultPfp from './examplePfp.jpg';
 
 
-const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
+const dev = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
 
 const App = () => {
   const [spotifyAuthToken, setSpotifyAuthToken] = useState()
@@ -25,8 +25,8 @@ const App = () => {
   }, [Cookies.get('spotifyAuthToken')])
 
   const logout = () => {
-    Cookies.remove('spotifyAuthToken', { path: isDev ? '' : 'react-spotify-auth' })
-    window.location = isDev ? '/' : '/react-spotify-auth'
+    Cookies.remove('spotifyAuthToken', { path: dev ? '' : 'react-spotify-auth' })
+    window.location = dev ? '/' : '/react-spotify-auth'
   }
 
   return (
@@ -99,7 +99,7 @@ const App = () => {
 
               <div className="spotifyBtn">
                 <SpotifyAuth
-                  redirectUri={isDev ? 'http://localhost:3000/callback' : 'http://kevinjiang.ca/react-spotify-auth'}
+                  redirectUri={dev ? 'http://localhost:3000/callback' : 'http://kevinjiang.ca/react-spotify-auth'}
                   clientID='1a70ba777fec4ffd9633c0c418bdcf39'
                   scopes={[Scopes.userReadPrivate, Scopes.userReadEmail, "user-top-read"]}
                 />

@@ -49,7 +49,7 @@ const App = () => {
           <SpotifyAuth
             redirectUri='http://localhost:3000/callback'
             clientID='1a70ba777fec4ffd9633c0c418bdcf39'
-            scopes={[Scopes.userReadPrivate, Scopes.userReadEmail]}
+            scopes={[Scopes.userReadPrivate, "user-read-email"]} // either style will work
           />
         )
       }
@@ -67,11 +67,11 @@ Here's some props that you can use to customize the button. Starred fields are h
 | ---| --- |
 |`redirectUri`\* | Spotify redirect URI. In most cases, this is the URL of your webpage. *It must be set in your Developer Console*. |
 |`clientID`\* | Spotify app Client ID. Can be found from the Spotify Developer Console. |
-|`scopes`\* | **Array** of camelCased equivalent for the scopes you are requesting. For example, if you wanted the scope `user-read-recently-played` you can enter `[Scopes.userReadRecentlyPlayed]`. By default, the button requests `user-read-private` and `user-read-email`.|
-|`onAccessToken` | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`. By default, it prints a message to the console. |
+|`scopes`\* | *Array* of camelCased equivalent for the scopes you are requesting. For example, if you wanted the scope `user-read-recently-played` you can enter `[Scopes.userReadRecentlyPlayed]`. By default, the button requests `user-read-private` and `user-read-email`.|
+|`onAccessToken` | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`. By default, it prints a message to the console using `(token) => console.log('Access token: ', token)`.|
 |`title` | Message inside the button. By default, it is "Continue with Spotify". |
 |`btnClassName` | Class(es) that is given to the button. By default, the package includes one already. |
-|`containerClassName` | Class(es) that is given to the wrapping div. By default, the package includes one already.  |
+|`noLogo` | Removes the Spotify logo from the button. |
 
 
 Inspired by [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
