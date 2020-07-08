@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import { SpotifyApiContext, User, UserTop } from 'react-spotify-api'
+import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBBtn } from "mdbreact";
+import 'mdbreact/dist/css/mdb.css'
 import Cookies from 'js-cookie'
+
+
+import TrackCard from "./TrackCard";
+import defaultPfp from './examplePfp.jpg';
+import './App.scss';
+import './index.css';
 
 import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
-
-import { MDBCol, MDBContainer, MDBRow, MDBCard, MDBCardBody, MDBCardImage, MDBCardTitle, MDBCardText, MDBBtn } from "mdbreact";
-import 'mdbreact/dist/css/mdb.css'
-
-import './App.scss';
-import './index.css';
-import TrackCard from "./TrackCard";
-import defaultPfp from './examplePfp.jpg';
 
 
 const dev = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';

@@ -5,7 +5,8 @@
 import React, { Component } from 'react'
 import scopes from './Scopes'
 import hash from './hash'
-import styles from './styles.module.css'
+
+import styles from './SpotifyAuth.css'
 
 import SpotifyLogo from './spotify.svg'
 
@@ -58,7 +59,7 @@ class SpotifyAuth extends Component {
   render() {
     return (
       <button
-        className={this.props.btnClassName}
+        className={styles.rsaSpotifyBtn}
         onClick={(event) => this.handleClick(event)}
       >
         {!this.props.noLogo && (
@@ -68,7 +69,7 @@ class SpotifyAuth extends Component {
             className={styles.rsaSpotifyLogo}
           />
         )}
-        <span className='dispText'>{this.props.title} </span>
+        <span>{this.props.title} </span>
       </button>
     )
   }
@@ -80,7 +81,7 @@ SpotifyAuth.defaultProps = {
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
   onAccessToken: (token) => console.log('Access token: ', token),
   title: 'Continue with Spotify',
-  btnClassName: styles.rsaSpotifyBtn,
+  btnClassName: 'rsaSpotifyBtn',
   noLogo: false
 }
 
