@@ -1,6 +1,6 @@
 {
   "name": "react-spotify-auth",
-  "version": "0.4.4",
+  "version": "0.4.6",
   "description": "Easy Spotify Authentication, written in React",
   "author": "kevin51jiang",
   "license": "MIT",
@@ -18,7 +18,7 @@
     "test": "run-s test:unit test:lint test:build",
     "test:build": "run-s build",
     "test:lint": "eslint .",
-    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom-fourteen",
     "test:watch": "react-scripts test --env=jsdom",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build"
@@ -27,6 +27,8 @@
     "react": "^16.0.0"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.11.0",
+    "@testing-library/react": "^10.4.4",
     "babel-eslint": "^10.0.3",
     "cross-env": "^7.0.2",
     "eslint": "^6.8.0",

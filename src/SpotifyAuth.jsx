@@ -5,6 +5,7 @@
 import React, { Component } from 'react'
 import scopes from './Scopes'
 import hash from './hash'
+import getRedirectUri from './generateUrl'
 
 import styles from './SpotifyAuth.css'
 
@@ -45,15 +46,11 @@ class SpotifyAuth extends Component {
   handleClick = (event) => {
     event.preventDefault()
 
-    const url =
-      'https://accounts.spotify.com/authorize' +
-      '?response_type=token' +
-      `&client_id=${this.props.clientID}` +
-      `&scope=${this.props.scopes.join('%20')}` +
-      `&redirect_uri=${this.props.redirectUri}` +
-      '&show_dialog=true'
-
-    window.location = url
+    window.location = getRedirectUri(
+      this.props.clientID,
+      this.props.scopes,
+      this.props.redirectUri
+    )
   }
 
   render() {
