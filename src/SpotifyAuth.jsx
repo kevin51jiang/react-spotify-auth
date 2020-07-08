@@ -59,7 +59,7 @@ class SpotifyAuth extends Component {
   render() {
     return (
       <button
-        className={styles.rsaSpotifyBtn}
+        className={this.props.btnClassName || styles.rsaSpotifyBtn}
         onClick={(event) => this.handleClick(event)}
       >
         {!this.props.noLogo && (
@@ -81,7 +81,6 @@ SpotifyAuth.defaultProps = {
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
   onAccessToken: (token) => console.log('Access token: ', token),
   title: 'Continue with Spotify',
-  btnClassName: 'rsaSpotifyBtn',
   noLogo: false
 }
 
