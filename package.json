@@ -1,6 +1,6 @@
 {
   "name": "react-spotify-auth",
-  "version": "0.3.0",
+  "version": "0.4.4",
   "description": "Easy Spotify Authentication, written in React",
   "author": "kevin51jiang",
   "license": "MIT",
