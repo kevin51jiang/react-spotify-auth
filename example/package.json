@@ -1,5 +1,5 @@
 {
-  "name": "react-spotify-auth-example",
+  "name": "react-spotify-auth-docs",
   "homepage": ".",
   "version": "0.0.0",
   "private": true,
@@ -10,6 +10,7 @@
     "eject": "node ../node_modules/react-scripts/bin/react-scripts.js eject"
   },
   "dependencies": {
+    "docz": "^2.3.1",
     "js-cookie": "^2.2.1",
     "mdbreact": "^4.27.0",
     "node-sass": "^4.14.1",
@@ -20,7 +21,8 @@
     "react-spotify-auth": "link:.."
   },
   "devDependencies": {
-    "@babel/plugin-syntax-object-rest-spread": "^7.8.3"
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "@emotion/core": "^10.0.28"
   },
   "eslintConfig": {
     "extends": "react-app"

@@ -1,0 +1,78 @@
+---
+name: SpotifyAuth
+---
+
+import { Playground, Props } from 'docz'
+import { SpotifyAuth, Scopes } from 'react-spotify-auth'
+import 'react-spotify-auth/dist/index.css'
+
+# SpotifyAuth
+
+## Properties
+
+<Props of={SpotifyAuth} />
+
+## Basics
+
+Change the function of the button to suit your needs.
+
+<Playground>
+  <SpotifyAuth
+    redirectUri='http://localhost:3000/callback'
+    clientID='1a70ba777fec4ffd9633c0c418bdcf39'
+  />
+  <br />
+  <SpotifyAuth
+    redirectUri='http://localhost:3000/callback'
+    clientID='1a70ba777fec4ffd9633c0c418bdcf39'
+  />
+</Playground>
+
+## Scopes
+
+These two components are identical and share the same purpose. Using `Scopes` keeps your codebase updated in case Spotify changes the names of one of the scopes, and helps prevent mistypes.
+
+<Playground>
+  <SpotifyAuth
+    scopes={[
+      Scopes.userFollowRead,
+      Scopes.userFollowModify,
+      Scopes.userReadRecentlyPlayed
+    ]}
+  />
+
+  <br />
+
+  <SpotifyAuth
+    scopes={[
+      'user-follow-read',
+      'user-follow-modify',
+      'user-read-recently-played'
+    ]}
+  />
+</Playground>
+
+## Appearance
+
+Lots of things can be done to alter the appearance
+
+<Playground>
+  <SpotifyAuth
+    redirectUri='http://localhost:3000/callback'
+    clientID='1a70ba777fec4ffd9633c0c418bdcf39'
+    noLogo
+  />
+  <br />
+  <SpotifyAuth
+    redirectUri='http://localhost:3000/callback'
+    clientID='1a70ba777fec4ffd9633c0c418bdcf39'
+    noLogo
+  />
+  <br />
+  <SpotifyAuth
+    redirectUri='http://localhost:3000/callback'
+    clientID='1a70ba777fec4ffd9633c0c418bdcf39'
+    noLogo
+  />
+
+</Playground>

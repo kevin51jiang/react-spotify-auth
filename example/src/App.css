@@ -1,0 +1,22 @@
+.masonry-with-columns {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  max-height: 3000px;
+  max-width: 100%;
+}
+.masonry-with-columns div {
+  flex: 1 0 auto;
+  margin: 0 0.5rem 1rem 0.5rem;
+  text-align: center;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.masonry-with-columns div * {
+  max-width: 18rem;
+}
+
+.masonry-with-columns div img {
+  margin-left: 0 0.5rem;
+}

@@ -79,6 +79,9 @@ SpotifyAuth.propTypes = {
    * Wao redirect URI
    */
   redirectUri: t.string.isRequired,
+  /**
+   * HEHEHEHEHEHEH
+   */
   clientID: t.string.isRequired,
   scopes: t.arrayOf(t.string),
   onAccessToken: t.func,

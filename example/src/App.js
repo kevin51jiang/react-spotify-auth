@@ -7,7 +7,7 @@ import Cookies from 'js-cookie'
 
 import TrackCard from "./TrackCard";
 import defaultPfp from './examplePfp.jpg';
-import './App.scss';
+import './App.css';
 import './index.css';
 
 import { SpotifyAuth, Scopes } from 'react-spotify-auth'
