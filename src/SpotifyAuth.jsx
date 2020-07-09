@@ -4,11 +4,11 @@
 
 import React, { Component } from 'react'
 import scopes from './Scopes'
-import hash from './hash'
+// import hash from './hash'
 import getRedirectUri from './generateUrl'
 
 import styles from './SpotifyAuth.css'
-
+import t from 'prop-types'
 import SpotifyLogo from './spotify.svg'
 
 class SpotifyAuth extends Component {
@@ -20,20 +20,22 @@ class SpotifyAuth extends Component {
   }
 
   getHash = () => {
-    return window.parent.location.hash
-      .substring(1)
-      .split('&')
-      .reduce((initial, item) => {
-        if (item) {
-          var parts = item.split('=')
-          initial[parts[0]] = decodeURIComponent(parts[1])
-        }
-        return initial
-      }, {})
+    return window
+      ? window.parent.location.hash
+          .substring(1)
+          .split('&')
+          .reduce((initial, item) => {
+            if (item) {
+              var parts = item.split('=')
+              initial[parts[0]] = decodeURIComponent(parts[1])
+            }
+            return initial
+          }, {})
+      : ''
   }
 
   componentDidMount() {
-    const accessToken = hash.access_token
+    const accessToken = this.getHash().access_token
 
     if (accessToken) {
       // eslint-disable-next-line prettier/prettier
@@ -70,6 +72,18 @@ class SpotifyAuth extends Component {
       </button>
     )
   }
+}
+
+SpotifyAuth.propTypes = {
+  /**
+   * Wao redirect URI
+   */
+  redirectUri: t.string.isRequired,
+  clientID: t.string.isRequired,
+  scopes: t.arrayOf(t.string),
+  onAccessToken: t.func,
+  title: t.string,
+  noLogo: t.bool
 }
 
 SpotifyAuth.defaultProps = {
