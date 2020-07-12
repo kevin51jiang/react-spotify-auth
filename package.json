@@ -24,7 +24,8 @@
     "deploy": "gh-pages -d example/build",
     "docz:dev": "docz dev",
     "docz:build": "docz build",
-    "docz:serve": "docz build && docz serve"
+    "docz:serve": "docz build && docz serve",
+    "bump": "yarn upgrade && yarn test"
   },
   "peerDependencies": {
     "react": "^16.0.0"
