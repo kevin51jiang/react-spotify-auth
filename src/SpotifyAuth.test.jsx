@@ -13,9 +13,10 @@ describe('SpotifyAuth', () => {
 })
 
 test('Displays properly', async () => {
-  const { container, asFragment } = render(<SpotifyAuth />)
+  const { container, asFragment } = render(
+    <SpotifyAuth redirectUri='http://localhost:3000' clientID='fakeID' />
+  )
 
   expect(screen.getByText('Continue with Spotify')).toBeInTheDocument()
   expect(screen.getByRole('button')).not.toHaveAttribute('disabled')
-
 })

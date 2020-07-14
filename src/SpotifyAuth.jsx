@@ -4,7 +4,6 @@
 
 import React, { Component } from 'react'
 import scopes from './Scopes'
-// import hash from './hash'
 import getRedirectUri from './generateUrl'
 
 import styles from './SpotifyAuth.css'
@@ -38,9 +37,12 @@ class SpotifyAuth extends Component {
     const accessToken = this.getHash().access_token
 
     if (accessToken) {
-      // eslint-disable-next-line prettier/prettier
-      document.cookie = `spotifyAuthToken=${accessToken}; max-age=${60 * 60};`
-
+      if (!this.props.noCookie) {
+        document.cookie = `spotifyAuthToken=${accessToken}; max-age=${60 * 60};`
+      }
+      if (this.props.localStorage) {
+        window.localStorage.setItem('spotifyAuthToken', accessToken)
+      }
       this.props.onAccessToken(accessToken)
     }
   }
@@ -75,27 +77,24 @@ class SpotifyAuth extends Component {
 }
 
 SpotifyAuth.propTypes = {
-  /**
-   * Wao redirect URI
-   */
   redirectUri: t.string.isRequired,
-  /**
-   * HEHEHEHEHEHEH
-   */
   clientID: t.string.isRequired,
   scopes: t.arrayOf(t.string),
   onAccessToken: t.func,
   title: t.string,
-  noLogo: t.bool
+  noLogo: t.bool,
+  noCookie: t.bool,
+  localStorage: t.bool
 }
 
 SpotifyAuth.defaultProps = {
-  redirectUri: 'http://localhost:3000/callback',
-  clientID: '1a70ba777fec4ffd9633c0c418bdcf39',
+  redirectUri: 'http://localhost:3000',
   scopes: [scopes.userReadPrivate, scopes.userReadEmail],
-  onAccessToken: (token) => console.log('Access token: ', token),
+  onAccessToken: (token) => {},
   title: 'Continue with Spotify',
-  noLogo: false
+  localStorage: false,
+  noLogo: false,
+  noCookie: false
 }
 
 export default SpotifyAuth
