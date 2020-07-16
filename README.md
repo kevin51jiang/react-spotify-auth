@@ -42,16 +42,19 @@ function App = () => {
 ```jsx
 import React from 'react'
 import { SpotifyApiContext } from 'react-spotify-api'
+import Cookies from 'js-cookie'
 
 import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
 
 const App = () => {
+  const token = Cookies.get('spotifyAuthToken')
   return (
     <div className='app'>
-      {window.localStorage.getItem('spotifyAuthToken') ? (
-        <SpotifyApiContext.Provider value={spotifyAuthToken}>
+      {token ? (
+        <SpotifyApiContext.Provider value={token}>
           {/* Your Spotify Code here */}
+          <p>You are authorized with token: {token}</p>
         </SpotifyApiContext.Provider>
       ) : (
         // Display the login page
@@ -64,6 +67,7 @@ const App = () => {
     </div>
   )
 }
+export default App
 ```
 
 ## API
