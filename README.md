@@ -107,15 +107,17 @@ You can access it directly through [cookies.get()](https://developer.mozilla.org
 If you prefer working with the [localStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), a prop of `localStorage` can be passed into the component, which can be accessed at `spotifyAuthToken`. Keep in mind however, that this does not offer the 2h expiry window.
 
 ## Changelog
+0.5.3
+ - Bump deps for security
 
-- 0.5.1
-  - Potentially breaking changes by changing the values of default props, and adding new ones. Also better docs woo!
-  - Default props:
-    - clientID: 1a70ba777fec4ffd9633c0c418bdcf39 -> nothing
-    - redirectUri: http://localhost:3000/callback -> http://localhost:3000
-    - onAccessToken: `(token) => console.log('Access token: ', token)` -> `(token) => {}`
-  - Added props:
-    - `localStorage`, `noCookie`
+0.5.1
+- Potentially breaking changes by changing the values of default props, and adding new ones. Also better docs woo!
+- Default props:
+  - clientID: 1a70ba777fec4ffd9633c0c418bdcf39 -> nothing
+  - redirectUri: http://localhost:3000/callback -> http://localhost:3000
+  - onAccessToken: `(token) => console.log('Access token: ', token)` -> `(token) => {}`
+- Added props:
+  - `localStorage`, `noCookie`
 
 ## License & Attribution
 
