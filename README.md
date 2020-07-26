@@ -107,11 +107,15 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
+1.0.1
+
+- Update readme to remove warning
+
 1.0.0
 
 - Added button logo classes
 
-0.5.3
+  0.5.3
 
 - Bump deps for security
 
