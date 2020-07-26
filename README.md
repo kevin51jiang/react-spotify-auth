@@ -14,8 +14,6 @@ npm install --save react-spotify-auth
 yarn add react-spotify-auth
 ```
 
-**Not recommended for production for versions <1.0.0**
-
 ## Quickstart
 
 ```jsx
@@ -109,11 +107,15 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
+1.0.0
+
+- Added button logo classes
+
 0.5.3
 
 - Bump deps for security
 
-0.5.1
+  0.5.1
 
 - Potentially breaking changes by changing the values of default props, and adding new ones. Also better docs woo!
 - Default props:
