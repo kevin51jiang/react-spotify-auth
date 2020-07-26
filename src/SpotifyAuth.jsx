@@ -8,7 +8,7 @@ import getRedirectUri from './generateUrl'
 
 import styles from './SpotifyAuth.css'
 import t from 'prop-types'
-import SpotifyLogo from './spotify.svg'
+import SpotifyLogo from './SpotifyLogo'
 
 class SpotifyAuth extends Component {
   constructor(props) {
@@ -64,13 +64,9 @@ class SpotifyAuth extends Component {
         onClick={(event) => this.handleClick(event)}
       >
         {!this.props.noLogo && (
-          <img
-            src={SpotifyLogo}
-            alt='Spotify Logo'
-            className={styles.rsaSpotifyLogo}
-          />
+          <SpotifyLogo className={this.props.logoClassName} />
         )}
-        <span>{this.props.title} </span>
+        <span>{this.props.title}</span>
       </button>
     )
   }
@@ -81,6 +77,7 @@ SpotifyAuth.propTypes = {
   clientID: t.string.isRequired,
   scopes: t.arrayOf(t.string),
   onAccessToken: t.func,
+  logoClassName: t.string,
   title: t.string,
   noLogo: t.bool,
   noCookie: t.bool,

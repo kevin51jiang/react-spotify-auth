@@ -82,6 +82,7 @@ Here's some props that can be used to customize the button. Please enter your ow
 | `onAccessToken` |          | `(token) => {}`                            | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`.                                           |
 | `title`         |          | "Continue with Spotify"                    | Message inside the button.                                                                                                                                                            |
 | `btnClassName`  |          | style included in package                  | Class(es) that is given to the button.                                                                                                                                                |
+| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class._                                                                         |
 | `noLogo`        |          | `false`                                    | Removes the Spotify logo from the button.                                                                                                                                             |
 | `localStorage`  |          | `false`                                    | Uses `window.localStorage` as a method to store the token. Note that localstorage does not have an expiry.                                                                            |
 | `noCookie`      |          | `false`                                    | Does not store the auth token in a cookie named `SpotifyAuth`                                                                                                                         |
@@ -107,10 +108,13 @@ You can access it directly through [cookies.get()](https://developer.mozilla.org
 If you prefer working with the [localStorage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage), a prop of `localStorage` can be passed into the component, which can be accessed at `spotifyAuthToken`. Keep in mind however, that this does not offer the 2h expiry window.
 
 ## Changelog
+
 0.5.3
- - Bump deps for security
+
+- Bump deps for security
 
 0.5.1
+
 - Potentially breaking changes by changing the values of default props, and adding new ones. Also better docs woo!
 - Default props:
   - clientID: 1a70ba777fec4ffd9633c0c418bdcf39 -> nothing
