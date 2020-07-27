@@ -9,6 +9,7 @@ import getRedirectUri from './generateUrl'
 import styles from './SpotifyAuth.css'
 import t from 'prop-types'
 import SpotifyLogo from './SpotifyLogo'
+import { getHash } from './getHash'
 
 class SpotifyAuth extends Component {
   constructor(props) {
@@ -18,23 +19,8 @@ class SpotifyAuth extends Component {
     }
   }
 
-  getHash = () => {
-    return window
-      ? window.parent.location.hash
-          .substring(1)
-          .split('&')
-          .reduce((initial, item) => {
-            if (item) {
-              var parts = item.split('=')
-              initial[parts[0]] = decodeURIComponent(parts[1])
-            }
-            return initial
-          }, {})
-      : ''
-  }
-
   componentDidMount() {
-    const accessToken = this.getHash().access_token
+    const accessToken = getHash().access_token
 
     if (accessToken) {
       if (!this.props.noCookie) {

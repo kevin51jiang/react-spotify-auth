@@ -38,4 +38,12 @@ const scopes = {
   userReadPrivate: 'user-read-private'
 }
 
+export const allScopes = (() => {
+  return Object.keys(scopes)
+    .reduce((sum, scope) => {
+      return sum.concat(scopes[scope], '%20')
+    }, '')
+    .slice(0, -3)
+})()
+
 export default scopes

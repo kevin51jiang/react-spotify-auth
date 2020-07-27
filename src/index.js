@@ -1,4 +1,7 @@
-import Scopes from './Scopes'
+import Scopes, { allScopes } from './Scopes'
 import SpotifyAuth from './SpotifyAuth'
+import SpotifyAuthListener from './SpotifyAuthListener'
 
-export { Scopes, SpotifyAuth }
+Scopes.all = allScopes
+
+export { Scopes, SpotifyAuth, SpotifyAuthListener }

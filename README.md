@@ -7,11 +7,11 @@
 ## Install
 
 ```bash
-npm install --save react-spotify-auth
+yarn add react-spotify-auth
 ```
 
 ```bash
-yarn add react-spotify-auth
+npm install --save react-spotify-auth
 ```
 
 ## Quickstart
@@ -70,6 +70,8 @@ export default App
 
 ## API
 
+### SpotifyAuth
+
 Here's some props that can be used to customize the button. Please enter your own values for `redirectUri` and `clientID`, otherwise your project may not work correctly.
 
 | Name            | Required | Default                                    | Description                                                                                                                                                                           |
@@ -80,10 +82,20 @@ Here's some props that can be used to customize the button. Please enter your ow
 | `onAccessToken` |          | `(token) => {}`                            | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`.                                           |
 | `title`         |          | "Continue with Spotify"                    | Message inside the button.                                                                                                                                                            |
 | `btnClassName`  |          | style included in package                  | Class(es) that is given to the button.                                                                                                                                                |
-| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class._                                                                         |
+| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class, otherwise it will not appear._                                                                         |
 | `noLogo`        |          | `false`                                    | Removes the Spotify logo from the button.                                                                                                                                             |
 | `localStorage`  |          | `false`                                    | Uses `window.localStorage` as a method to store the token. Note that localstorage does not have an expiry.                                                                            |
-| `noCookie`      |          | `false`                                    | Does not store the auth token in a cookie named `SpotifyAuth`                                                                                                                         |
+| `noCookie`      |          | `false`                                    | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`                                                                                                      |
+
+### SpotifyAuthListener
+
+A simplified version of the `SpotifyAuth` component, returning nothing but still listening for any tokens that it might get.
+
+| Name            | Required | Default         | Description                                                                                |
+| --------------- | :------: | --------------- | ------------------------------------------------------------------------------------------ |
+| `onAccessToken` |          | `(token) => {}` | Function that gets called when an access token is found                                    |
+| `localStorage`  |          | `false`         | When true, it will also store the token in `window.localStorage` under `spotifyAuthToken`. |
+| `noCookie`      |          | `false`         | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`           |
 
 ## Scopes
 
@@ -107,11 +119,18 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
-1.0.1
+1.1.0
+
+- The real 1.0 update!
+- Added `SpotifyAuthListener` for multipage applications. This means you don't have to render a `SpotifyAuth` button on every page that you want to redirect to, or otherwise aquire Spotify credentials.
+- `Scopes.all` now gives you all the permissions available. Use with caution.
+- Clear up localstorage code to be up to date with documentation
+
+  1.0.1
 
 - Update readme to remove warning
 
-1.0.0
+  1.0.0
 
 - Added button logo classes
 
