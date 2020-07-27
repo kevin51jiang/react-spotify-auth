@@ -35,6 +35,8 @@ function App = () => {
 
 [Spotify Web Player](https://kevinjiang.ca/Spotify-Web-Player/) (Premium Spotify accounts only, must be listening to a track prior to using)
 
+**Got something to add, or a feature you want? Send a PR or create and issue!**
+
 ## Usage
 
 ```jsx
@@ -82,7 +84,7 @@ Here's some props that can be used to customize the button. Please enter your ow
 | `onAccessToken` |          | `(token) => {}`                            | Function that gets triggered when the component recognizes an access token after an auth grant. Is called with the parameter `accessToken`.                                           |
 | `title`         |          | "Continue with Spotify"                    | Message inside the button.                                                                                                                                                            |
 | `btnClassName`  |          | style included in package                  | Class(es) that is given to the button.                                                                                                                                                |
-| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class, otherwise it will not appear._                                                                         |
+| `logoClassName` |          | style included in package                  | Class(es) given to the svg that draws the Spotify logo. _Make sure to add a width if you use a custom class, otherwise it will not appear._                                           |
 | `noLogo`        |          | `false`                                    | Removes the Spotify logo from the button.                                                                                                                                             |
 | `localStorage`  |          | `false`                                    | Uses `window.localStorage` as a method to store the token. Note that localstorage does not have an expiry.                                                                            |
 | `noCookie`      |          | `false`                                    | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`                                                                                                      |
