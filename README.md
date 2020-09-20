@@ -35,7 +35,7 @@ function App = () => {
 
 [Spotify Web Player](https://kevinjiang.ca/Spotify-Web-Player/) (Premium Spotify accounts only, must be listening to a track prior to using)
 
-**Got something to add, or a feature you want? Send a PR or create and issue!**
+**Got something to add, or a feature you want? Send a PR or create an issue!**
 
 ## Usage
 
@@ -99,6 +99,13 @@ A simplified version of the `SpotifyAuth` component, returning nothing but still
 | `localStorage`  |          | `false`         | When true, it will also store the token in `window.localStorage` under `spotifyAuthToken`. |
 | `noCookie`      |          | `false`         | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`           |
 
+```jsx
+// place this on a page that you will redirect to
+// if a <SpotifyAuth /> component isn't there already.
+<SpotifyAuthListener />
+
+```
+
 ## Scopes
 
 As indicated in the table above, scopes are accessible by the camelCased name given by Spotify. A full list can be found [here](https://developer.spotify.com/documentation/general/guides/scopes/) along with their descriptions. These are included in the package mainly to help autocomplete and prevent annoying typos.
@@ -121,6 +128,11 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
+  1.1.1
+
+- Better docs
+- Updated dependencies
+
 1.1.0
 
 - The real 1.0 update!
@@ -128,19 +140,19 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 - `Scopes.all` now gives you all the permissions available. Use with caution.
 - Clear up localstorage code to be up to date with documentation
 
-  1.0.1
+1.0.1
 
 - Update readme to remove warning
 
-  1.0.0
+1.0.0
 
 - Added button logo classes
 
-  0.5.3
+0.5.3
 
 - Bump deps for security
 
-  0.5.1
+0.5.1
 
 - Potentially breaking changes by changing the values of default props, and adding new ones. Also better docs woo!
 - Default props:
