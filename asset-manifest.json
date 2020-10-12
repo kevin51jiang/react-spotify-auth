@@ -1,28 +1,27 @@
 {
   "files": {
-    "main.css": "./static/css/main.00d96ce9.chunk.css",
-    "main.js": "./static/js/main.5c382a8d.chunk.js",
-    "main.js.map": "./static/js/main.5c382a8d.chunk.js.map",
+    "main.css": "./static/css/main.e7b0b134.chunk.css",
+    "main.js": "./static/js/main.460153cb.chunk.js",
+    "main.js.map": "./static/js/main.460153cb.chunk.js.map",
     "runtime-main.js": "./static/js/runtime-main.d26e358c.js",
     "runtime-main.js.map": "./static/js/runtime-main.d26e358c.js.map",
-    "static/css/2.5907f6f0.chunk.css": "./static/css/2.5907f6f0.chunk.css",
-    "static/js/2.a5532609.chunk.js": "./static/js/2.a5532609.chunk.js",
-    "static/js/2.a5532609.chunk.js.map": "./static/js/2.a5532609.chunk.js.map",
+    "static/css/2.5ad85377.chunk.css": "./static/css/2.5ad85377.chunk.css",
+    "static/js/2.6f58ea56.chunk.js": "./static/js/2.6f58ea56.chunk.js",
+    "static/js/2.6f58ea56.chunk.js.map": "./static/js/2.6f58ea56.chunk.js.map",
     "index.html": "./index.html",
-    "precache-manifest.cdb4716606c273ae87b8f42c07b92edb.js": "./precache-manifest.cdb4716606c273ae87b8f42c07b92edb.js",
+    "precache-manifest.9d76f77ac34f60448ebc9cc3c01a30aa.js": "./precache-manifest.9d76f77ac34f60448ebc9cc3c01a30aa.js",
     "service-worker.js": "./service-worker.js",
-    "static/css/2.5907f6f0.chunk.css.map": "./static/css/2.5907f6f0.chunk.css.map",
-    "static/css/main.00d96ce9.chunk.css.map": "./static/css/main.00d96ce9.chunk.css.map",
-    "static/js/2.a5532609.chunk.js.LICENSE.txt": "./static/js/2.a5532609.chunk.js.LICENSE.txt",
+    "static/css/2.5ad85377.chunk.css.map": "./static/css/2.5ad85377.chunk.css.map",
+    "static/css/main.e7b0b134.chunk.css.map": "./static/css/main.e7b0b134.chunk.css.map",
+    "static/js/2.6f58ea56.chunk.js.LICENSE.txt": "./static/js/2.6f58ea56.chunk.js.LICENSE.txt",
     "static/media/mdb.css": "./static/media/arrow_right.8ef6a08c.svg",
-    "static/media/examplePfp.jpg": "./static/media/examplePfp.f6c53af4.jpg",
-    "static/media/spotify~bkRyBIbO.svg": "./static/media/spotify~bkRyBIbO.9c3dc69e.svg"
+    "static/media/examplePfp.jpg": "./static/media/examplePfp.f6c53af4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.d26e358c.js",
-    "static/css/2.5907f6f0.chunk.css",
-    "static/js/2.a5532609.chunk.js",
-    "static/css/main.00d96ce9.chunk.css",
-    "static/js/main.5c382a8d.chunk.js"
+    "static/css/2.5ad85377.chunk.css",
+    "static/js/2.6f58ea56.chunk.js",
+    "static/css/main.e7b0b134.chunk.css",
+    "static/js/main.460153cb.chunk.js"
   ]
 }
