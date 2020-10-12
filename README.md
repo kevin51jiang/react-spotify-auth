@@ -129,7 +129,11 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
-  1.1.1
+1.1.2
+ - Bump dependencies in library and example
+
+
+1.1.1
 
 - Better docs
 - Updated dependencies
