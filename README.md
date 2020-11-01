@@ -15,6 +15,14 @@ yarn add react-spotify-auth
 npm install --save react-spotify-auth
 ```
 
+## Demos
+
+[User's top tracks](http://kevinjiang.ca/react-spotify-auth/) (all user accounts)
+
+[Spotify Web Player](https://kevinjiang.ca/Spotify-Web-Player/) (Premium Spotify accounts only, must be listening to a track prior to using)
+
+**Got something to add, or a feature you want? Send a PR or create an issue!**
+
 ## Quickstart
 
 ```jsx
@@ -29,14 +37,6 @@ function App = () => {
   />
 }
 ```
-
-## Demos
-
-[User's top tracks](http://kevinjiang.ca/react-spotify-auth/) (all user accounts)
-
-[Spotify Web Player](https://kevinjiang.ca/Spotify-Web-Player/) (Premium Spotify accounts only, must be listening to a track prior to using)
-
-**Got something to add, or a feature you want? Send a PR or create an issue!**
 
 ## Usage
 
@@ -104,7 +104,6 @@ A simplified version of the `SpotifyAuth` component, returning nothing but still
 // place this on a page that you will redirect to
 // if a <SpotifyAuth /> component isn't there already.
 <SpotifyAuthListener />
-
 ```
 
 ## Scopes
@@ -129,35 +128,39 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
-1.1.2
- - Bump dependencies in library and example
+1.1.3
 
+- Bump dependencies
 
-1.1.1
+  1.1.2
+
+- Bump dependencies in library and example
+
+  1.1.1
 
 - Better docs
 - Updated dependencies
 
-1.1.0
+  1.1.0
 
 - The real 1.0 update!
 - Added `SpotifyAuthListener` for multipage applications. This means you don't have to render a `SpotifyAuth` button on every page that you want to redirect to, or otherwise aquire Spotify credentials.
 - `Scopes.all` now gives you all the permissions available. Use with caution.
 - Clear up localstorage code to be up to date with documentation
 
-1.0.1
+  1.0.1
 
 - Update readme to remove warning
 
-1.0.0
+  1.0.0
 
 - Added button logo classes
 
-0.5.3
+  0.5.3
 
 - Bump deps for security
 
-0.5.1
+  0.5.1
 
 - Potentially breaking changes by changing the values of default props, and adding new ones. Also better docs woo!
 - Default props:
@@ -172,6 +175,5 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 MIT © [kevin51jiang](https://github.com/kevin51jiang)
 
 Inspired by [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
-
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkevin51jiang%2Freact-spotify-auth.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkevin51jiang%2Freact-spotify-auth?ref=badge_large)
