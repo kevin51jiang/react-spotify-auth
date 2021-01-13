@@ -128,7 +128,17 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
-1.1.3
+1.2.1
+
+- Move to React 17
+
+- Bump dependencies
+
+1.1.4
+
+- Bump dependencies
+
+  1.1.3
 
 - Bump dependencies
 

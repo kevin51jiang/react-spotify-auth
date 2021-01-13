@@ -87,22 +87,23 @@ const App = () => {
                   )
                 }
               </User>
-
-              <MDBRow className='masonry-with-columns'>
-                <UserTop type='tracks'>
-                  {(tracks, loading, error) =>
-                    tracks && tracks.data
-                      ? tracks.data.items.map((track, ind) => {
-                          return (
-                            <>
-                              <TrackCard track={track} />
-                            </>
-                          )
-                        })
-                      : null
-                  }
-                </UserTop>
-              </MDBRow>
+              <div style={{ width: '100%' }}>
+                <MDBRow className='masonry-with-columns'>
+                  <UserTop type='tracks'>
+                    {(tracks, loading, error) =>
+                      tracks && tracks.data
+                        ? tracks.data.items.map((track, ind) => {
+                            return (
+                              <>
+                                <TrackCard track={track} />
+                              </>
+                            )
+                          })
+                        : null
+                    }
+                  </UserTop>
+                </MDBRow>
+              </div>
             </SpotifyApiContext.Provider>
             <MDBBtn onClick={logout}>Logout</MDBBtn>
           </>
