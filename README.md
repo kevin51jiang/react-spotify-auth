@@ -89,6 +89,7 @@ Here's some props that can be used to customize the button. Please enter your ow
 | `noLogo`        |          | `false`                                    | Removes the Spotify logo from the button.                                                                                                                                             |
 | `localStorage`  |          | `false`                                    | Uses `window.localStorage` as a method to store the token. Note that localstorage does not have an expiry.                                                                            |
 | `noCookie`      |          | `false`                                    | When true, it does not store the auth token in a cookie named `SpotifyAuthToken`                                                                                                      |
+| `showDialog`      |          | `false`                                  | Whether or not to force the user to approve the app again if they’ve already done so. If false (default), a user who has already approved the application may be automatically redirected to the URI specified by redirect_uri. If true, the user will not be automatically redirected and will have to approve the app again.                                                                                                      |
 
 ### SpotifyAuthListener
 

@@ -39,7 +39,8 @@ class SpotifyAuth extends Component {
     window.location = getRedirectUri(
       this.props.clientID,
       this.props.scopes,
-      this.props.redirectUri
+      this.props.redirectUri,
+      this.props.showDialog
     )
   }
 
@@ -67,6 +68,7 @@ SpotifyAuth.propTypes = {
   title: t.string,
   noLogo: t.bool,
   noCookie: t.bool,
+  showDialog: t.bool,
   localStorage: t.bool
 }
 
@@ -77,7 +79,8 @@ SpotifyAuth.defaultProps = {
   title: 'Continue with Spotify',
   localStorage: false,
   noLogo: false,
-  noCookie: false
+  noCookie: false,
+  showDialog: false,
 }
 
 export default SpotifyAuth
