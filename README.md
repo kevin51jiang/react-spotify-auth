@@ -129,30 +129,19 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
+
+1.3.1
+
+ - Add show dialogue parameter to url
+
 1.2.1
 
 - Move to React 17
 
-- Bump dependencies
+1.1.0 - 1.1.4
+ - Dependency upgrades
 
-1.1.4
-
-- Bump dependencies
-
-  1.1.3
-
-- Bump dependencies
-
-  1.1.2
-
-- Bump dependencies in library and example
-
-  1.1.1
-
-- Better docs
-- Updated dependencies
-
-  1.1.0
+1.1.0
 
 - The real 1.0 update!
 - Added `SpotifyAuthListener` for multipage applications. This means you don't have to render a `SpotifyAuth` button on every page that you want to redirect to, or otherwise aquire Spotify credentials.
