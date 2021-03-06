@@ -28,7 +28,7 @@
     "bump": "yarn upgrade && yarn test"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.1"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.0",
