@@ -1,9 +1,15 @@
+sudo: required
+before_install:
+  - yarn global add node-gyp
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - g++-5
 language: node_js
 node_js:
-  - "stable"
-cache:
-  directories:
-  - node_modules
+  - "12"
 script:
   - yarn test
   - yarn build
