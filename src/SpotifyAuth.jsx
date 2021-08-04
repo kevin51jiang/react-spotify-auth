@@ -29,6 +29,7 @@ class SpotifyAuth extends Component {
       if (this.props.localStorage) {
         window.localStorage.setItem('spotifyAuthToken', accessToken)
       }
+      window.opener?.postMessage({ type: 'react-spotify-auth', accessToken }, '*')
       this.props.onAccessToken(accessToken)
     }
   }
@@ -36,12 +37,26 @@ class SpotifyAuth extends Component {
   handleClick = (event) => {
     event.preventDefault()
 
-    window.location = getRedirectUri(
+    const redirectUri = getRedirectUri(
       this.props.clientID,
       this.props.scopes,
       this.props.redirectUri,
       this.props.showDialog
     )
+
+    if (window.location !== window.parent.location) {
+      const loginWindow = window.open(redirectUri)
+      window.addEventListener('message', (event) => {
+        if (event.data.type !== 'react-spotify-auth' || !event.data.accessToken) {
+          return
+        }
+
+        loginWindow.close()
+        this.props.onAccessToken(event.data.accessToken)
+      }, false)
+    } else {
+      window.location = redirectUri
+    }
   }
 
   render() {

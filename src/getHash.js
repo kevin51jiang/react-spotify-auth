@@ -1,6 +1,6 @@
 export const getHash = () => {
   return window
-    ? window.parent.location.hash
+    ? window.location.hash
         .substring(1)
         .split('&')
         .reduce((initial, item) => {
