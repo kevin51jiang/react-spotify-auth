@@ -129,6 +129,9 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
+1.4.1
+- Allowed to be used in iframe (thanks @ffleandro !)
+
 1.3.2 - 1.3.5
 - Dependency upgrades
 
