@@ -49,7 +49,7 @@ import { SpotifyAuth, Scopes } from 'react-spotify-auth'
 import 'react-spotify-auth/dist/index.css'
 
 const App = () => {
-  let [token, setToken] = useState('');
+    const [token, setToken] = React.useState(Cookies.get("spotifyAuthToken"))
   return (
     <div className='app'>
       {token ? (
