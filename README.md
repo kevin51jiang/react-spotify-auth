@@ -63,7 +63,7 @@ const App = () => {
           redirectUri='http://localhost:3000/callback'
           clientID='1a70ba777fec4ffd9633c0c418bdcf39'
           scopes={[Scopes.userReadPrivate, 'user-read-email']} // either style will work
-          onAccessToken={(token:string) => { setToken(token)} }
+          onAccessToken={(token) => setToken(token)}
         />
       )}
     </div>
