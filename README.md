@@ -130,6 +130,10 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
+1.4.2
+
+ - Dependency upgrades
+
 1.4.1
 - Allowed to be used in iframe (thanks @ffleandro !)
 
