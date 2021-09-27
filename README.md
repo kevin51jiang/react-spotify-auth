@@ -130,7 +130,7 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 
 ## Changelog
 
-1.4.2
+1.4.2 - 1.4.3
 
  - Dependency upgrades
 
