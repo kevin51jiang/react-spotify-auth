@@ -29,7 +29,7 @@
     "audit:fix": "npx yarn-audit-fix"
   },
   "peerDependencies": {
-    "react": "^16.0.0"
+    "react": "^17.0.0"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.11.0",
