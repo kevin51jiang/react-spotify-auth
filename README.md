@@ -110,7 +110,7 @@ A simplified version of the `SpotifyAuth` component, returning nothing but still
 
 ## Scopes
 
-As indicated in the table above, scopes are accessible by the camelCased name given by Spotify. A full list can be found [here](https://developer.spotify.com/documentation/general/guides/scopes/) along with their descriptions. These are included in the package mainly to help autocomplete and prevent annoying typos.
+As indicated in the table above, scopes are accessible by the camelCased name given by Spotify. A full list can be found [here](https://developer.spotify.com/documentation/general/guides/authorization/scopes/) along with their descriptions. These are included in the package mainly to help autocomplete and prevent annoying typos.
 
 ```jsx
 import { Scopes } from 'react-spotify-auth'
