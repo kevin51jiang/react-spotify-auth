@@ -5,6 +5,10 @@
 [![NPM](https://img.shields.io/npm/v/react-spotify-auth.svg)](https://www.npmjs.com/package/react-spotify-auth) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com) [![Build Status](https://travis-ci.org/kevin51jiang/react-spotify-auth.svg?branch=master)](https://travis-ci.org/kevin51jiang/react-spotify-auth) ![GitHub stars](https://img.shields.io/github/stars/kevin51jiang/react-spotify-auth?style=social)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkevin51jiang%2Freact-spotify-auth.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkevin51jiang%2Freact-spotify-auth?ref=badge_shield)
 
+
+## ⚠️ Warning: Deprecated ⚠️
+⚠️ Warning: Spotify is [deprecating the implicit grant flow](https://github.com/Spotifyd/spotifyd/issues/1325) that this library relies on. This library is now archived and no more changes will be made. As always, you are free to fork and make it work yourself. Happy hacking! ⚠️
+
 ## Install
 
 ```bash
@@ -185,5 +189,3 @@ If you prefer working with the [localStorage API](https://developer.mozilla.org/
 MIT © [kevin51jiang](https://github.com/kevin51jiang)
 
 Inspired by [this StackOverflow question](https://stackoverflow.com/questions/58964265/spotify-implicit-grant-flow-with-react-user-login)
-
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fkevin51jiang%2Freact-spotify-auth.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fkevin51jiang%2Freact-spotify-auth?ref=badge_large)
